@@ -1,10 +1,8 @@
 function [dx,T,tmax,OptL_bearing,Opt_Vol,rad_bearing] = Heatmodel(F_heave,mu,T_sea,dtheta_max,f_rotation,n,rho,k,c,th_bearing,tstop)
 %HEAT MODEL
-%COMPUTATIONAL 3 SEA BEARING GROUP PROJECT
+
 %Defines all variables and invokes all necessary functions
-%Will Quinn, Isidoros Papachristou, David Neilan, Calllum Quinn, Hamish
-%Muir
-%Edinburgh, UK _ 07/11/2018
+
 %Defining Variables
                                                                                                                                                            
 rad_bearing=0.2;                                                        %bearing radius (m)
@@ -42,7 +40,8 @@ Opt_Vol = arb_Volume;  %equating optimal volume with the output of the optimizat
 OptL_bearing = Opt_Vol/(pi*(rad_bearing+th_bearing)^2-pi*(rad_bearing)^2);   %calculating optimal bearing length
 
 end
-%David Neilan  31-Oct: Function to return max and avg values of velocity.
+
+Function to return max and avg values of velocity.
 function [Q,Vavg] = calc_velocity(inner_R,Freq,theta,mu,p_avg)
 %Displays sine motion of the arm and bearing at 1.3m from centre
 
@@ -81,7 +80,7 @@ Vavg = Vmax*0.637;
 Q = mu*Vavg*p_avg;
 end
 
-%Outputs max step size allowed %Isidoros Papachristou
+%Outputs max step size allowed 
 function [dtmax]=Stability_Test(n,dx,grad_dist,th_bearing,A,dV,rho,c,k,h)
 %Radius derived from arbitrary area of 1
 R=sqrt(1/pi);
@@ -152,7 +151,7 @@ dtmax=min(dt);
 end
 
 %Returns Matrix of Temperaturs with Respect to time and space and plots Temperatures vs x-position 
-%David Neilan & Isidoros Papachristou
+
 function [dx,T,tmax] = Temp_Gradient(Q_total, T_sea, dx,n,th_bearing,dtmax,rho,c,k,tstop)
 %x=(0:n)*dx;            %nodes position            
 A=1;                    %arbitrary scaling factor to account for the fact that all generated heat doesn't go through one single 'imaginary' rod
