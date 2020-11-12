@@ -7,6 +7,6 @@ app designer add-on). This should open up the GUI from where you can change the 
 
 For more information about the wave converter's overall system please refer to: https://www.slideshare.net/varunkumar240/oyster-wave-energy-converter
 
-This project was part of a university module, for more information please dm me. 
+This project was part of a university module, for more information please email me
 
 
