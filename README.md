@@ -1,4 +1,4 @@
-# wave_surge_optimiser_BEAr
+# wave_surge_bearing_optimizer
 Optimises bearing dimensions for a wave energy converter
 
 This MATLAB script is designed to work together with MATLAB's App Designer through a GUI. The heat model uses the FTCS scheme (for now)
